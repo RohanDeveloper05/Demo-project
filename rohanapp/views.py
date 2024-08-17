@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import psutil
+import pyjokes
 
 def home(requst):
-    return HttpResponse("Hello Everyone")
+    return HttpResponse(pyjokes.get_joke())
 # Create your views here.
